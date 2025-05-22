@@ -14,7 +14,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/token/', {
+      const response = await axios.post('https://financial-backend-2-pm6x.onrender.com/api/token/', {
         username,
         password,
       });
