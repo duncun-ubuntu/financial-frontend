@@ -1,0 +1,1343 @@
+/* src/components/FinancialManager/Invoices.css */
+
+/* Invoice Header */
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.invoice-header h2 {
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Modern Buttons */
+.modern-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.modern-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.modern-btn-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.modern-btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+.modern-btn-outline {
+  border: 2px solid #667eea;
+  color: #667eea;
+  background: transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modern-btn-outline:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.modern-btn-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(56, 239, 125, 0.3);
+}
+
+.modern-btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 239, 125, 0.4);
+}
+
+.modern-btn-danger {
+  border: 1px solid #dc3545;
+  color: #dc3545;
+  background: transparent;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.modern-btn-danger:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* Invoice Table Card */
+.invoice-table-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease;
+}
+
+.modern-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.modern-table thead th {
+  border: none;
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.modern-table tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modern-table tbody tr:hover {
+  background: #f8f9ff;
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.modern-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* User Type Modal */
+.user-type-modal .modal-content {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Invoice Wizard Modal */
+.invoice-wizard-modal .modal-content {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.invoice-wizard-modal .modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px 20px 0 0;
+  padding: 1.5rem;
+}
+
+.invoice-wizard-modal .modal-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Wizard Steps */
+.wizard-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.wizard-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  z-index: 2;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e9ecef;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.4s ease;
+  border: 3px solid #e9ecef;
+}
+
+.wizard-step.active .step-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  animation: pulse 2s infinite;
+}
+
+.wizard-step.completed .step-icon {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border-color: #11998e;
+}
+
+.step-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.wizard-step.active .step-title {
+  color: #667eea;
+  font-weight: 700;
+}
+
+.wizard-step.completed .step-title {
+  color: #11998e;
+}
+
+.step-connector {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: #e9ecef;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.wizard-step.completed ~ .wizard-step .step-connector {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+}
+
+/* Progress Bar */
+.modern-progress {
+  border-radius: 10px;
+  background: #e9ecef;
+  overflow: hidden;
+}
+
+.modern-progress .progress-bar {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.6s ease;
+}
+
+/* Step Content */
+.step-content {
+  min-height: 350px;
+  animation: fadeIn 0.4s ease;
+}
+
+.wizard-content {
+  padding: 1rem 0;
+}
+
+/* Modern Inputs */
+.modern-input,
+.modern-input-sm {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  background-color: white;
+}
+
+.modern-input:focus,
+.modern-input-sm:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+  transform: translateY(-2px);
+}
+
+.modern-input-sm {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Modern Select Dropdown */
+.modern-select,
+.form-select.modern-select {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  padding-right: 2.5rem;
+  font-size: 0.95rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23667eea' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+.modern-select:focus,
+.form-select.modern-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+  transform: translateY(-2px);
+  outline: 0;
+}
+
+.modern-select:disabled,
+.form-select.modern-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f8f9fa;
+}
+
+.modern-select option {
+  padding: 0.75rem;
+  background-color: white;
+  color: #212529;
+}
+
+/* Legacy form-select support (for backward compatibility) */
+.form-select:not(.modern-select) {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23667eea' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  padding-right: 2.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-select:not(.modern-select):disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Item Cards */
+.item-card {
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  animation: slideIn 0.4s ease;
+}
+
+.item-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.item-card .card-body {
+  padding: 1rem;
+}
+
+/* Option Cards */
+.option-card {
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.option-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+.modern-switch {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.modern-switch .form-check-input {
+  width: 3rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.modern-switch .form-check-input:checked {
+  background-color: #667eea;
+  border-color: #667eea;
+}
+
+/* Review Section */
+.review-section {
+  animation: fadeIn 0.5s ease;
+}
+
+.review-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  animation: slideInUp 0.4s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.review-card .card-header {
+  border: none;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+}
+
+.review-card p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border: none;
+  border-radius: 12px;
+  margin-top: 1rem;
+  animation: slideInUp 0.5s ease;
+}
+
+.summary-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Wizard Navigation */
+.wizard-navigation {
+  margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(102, 126, 234, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+}
+
+/* ==================== MOBILE CARD VIEW ==================== */
+.invoice-mobile-cards {
+  padding: 0;
+}
+
+.invoice-mobile-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  animation: slideInUp 0.4s ease;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+}
+
+.invoice-mobile-card:active {
+  transform: scale(0.98);
+}
+
+.invoice-mobile-card .card-body {
+  padding: 1.25rem;
+}
+
+.invoice-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Badge Styling */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Form Labels */
+.form-label {
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-label.fw-bold {
+  color: #212529;
+}
+
+/* Small Text */
+small.text-muted {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* ==================== SEARCH BAR ==================== */
+.search-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.5s ease;
+}
+
+.search-input-group {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.search-input-group:focus-within {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+  transform: translateY(-2px);
+}
+
+.search-icon {
+  background: transparent;
+  border: none;
+  color: #667eea;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+}
+
+.modern-search-input {
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  background: transparent;
+}
+
+.modern-search-input:focus {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.clear-search-btn {
+  border: none;
+  border-left: 1px solid #e9ecef;
+  background: transparent;
+  color: #6c757d;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.clear-search-btn:hover {
+  background: #f8f9fa;
+  color: #495057;
+}
+
+/* ==================== PAGINATION ==================== */
+.pagination-container {
+  margin: 2rem 0;
+}
+
+.modern-pagination {
+  gap: 0.5rem;
+}
+
+.modern-pagination .page-item {
+  margin: 0;
+}
+
+.modern-pagination .page-link {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  color: #667eea;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  margin: 0;
+}
+
+.modern-pagination .page-link:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.modern-pagination .page-item.active .page-link {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.modern-pagination .page-item.disabled .page-link {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f8f9fa;
+  border-color: #e9ecef;
+  color: #6c757d;
+}
+
+.modern-pagination .page-item.disabled .page-link:hover {
+  transform: none;
+  background: #f8f9fa;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablet Landscape (992px - 1199px) */
+@media (max-width: 1199px) {
+  .wizard-steps {
+    margin: 1.5rem 0;
+  }
+
+  .step-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) {
+  .invoice-container {
+    padding: 0 0.5rem;
+  }
+
+  .invoice-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .invoice-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .wizard-steps {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin: 1.5rem -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .wizard-steps::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wizard-step {
+    min-width: 100px;
+  }
+
+  .step-title {
+    font-size: 0.7rem;
+  }
+
+  .invoice-wizard-modal .modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .invoice-wizard-modal .modal-body {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media (max-width: 767px) {
+  .invoice-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .invoice-header h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .modern-btn-primary {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Search Bar Mobile */
+  .search-card {
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .search-input-group {
+    border-radius: 10px;
+  }
+
+  .search-icon {
+    padding: 0.65rem 0.875rem;
+    font-size: 1rem;
+  }
+
+  .modern-search-input {
+    padding: 0.65rem 0.875rem;
+    font-size: 16px; /* Prevent iOS zoom */
+  }
+
+  .clear-search-btn {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8rem;
+  }
+
+  /* Pagination Mobile */
+  .pagination-container {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modern-pagination {
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+    min-width: min-content;
+  }
+
+  .modern-pagination .page-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    min-width: 40px;
+    text-align: center;
+  }
+
+  /* Vertical Wizard Steps for Mobile */
+  .wizard-steps {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+    border-radius: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wizard-step {
+    flex: 0 0 auto;
+    min-width: 70px;
+  }
+
+  .step-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .step-title {
+    font-size: 0.65rem;
+    white-space: nowrap;
+  }
+
+  .step-connector {
+    display: none;
+  }
+
+  /* Modal Adjustments */
+  .invoice-wizard-modal .modal-dialog {
+    margin: 0;
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  .invoice-wizard-modal .modal-content {
+    height: 100vh;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .invoice-wizard-modal .modal-header {
+    border-radius: 0;
+    padding: 1rem;
+    flex-shrink: 0;
+  }
+
+  .invoice-wizard-modal .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .invoice-wizard-modal .modal-body {
+    padding: 1rem;
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .step-content {
+    min-height: auto;
+  }
+
+  /* Form Inputs - Full Width & Touch Friendly */
+  .modern-input,
+  .modern-input-sm,
+  .modern-select,
+  .form-select.modern-select {
+    padding: 0.875rem 1rem;
+    font-size: 16px; /* Prevents iOS zoom on focus - CRITICAL! */
+    border-radius: 12px;
+  }
+
+  .modern-input:focus,
+  .modern-input-sm:focus,
+  .modern-select:focus,
+  .form-select.modern-select:focus {
+    transform: none; /* Prevent transform on mobile */
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+  }
+
+  /* Enhanced Select for Mobile */
+  .modern-select,
+  .form-select.modern-select {
+    min-height: 48px; /* Better touch target */
+    padding-right: 3rem; /* More room for arrow */
+    background-size: 20px 15px; /* Larger arrow */
+    background-position: right 1rem center;
+    font-size: 16px !important; /* Force to prevent zoom */
+  }
+
+  .modern-select option,
+  .form-select.modern-select option {
+    padding: 1rem;
+    font-size: 16px;
+  }
+
+  /* Form Groups - Better Spacing */
+  .form-group,
+  .mb-3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Item Cards - Stack Vertically */
+  .item-card .card-body {
+    padding: 1rem;
+  }
+
+  .item-card .row {
+    gap: 0.75rem;
+  }
+
+  .item-card .col-md-2,
+  .item-card .col-md-3,
+  .item-card .col-md-4 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .item-card .form-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .modern-btn-danger {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Option Cards */
+  .option-card {
+    padding: 0.25rem;
+  }
+
+  .option-card .card-body {
+    padding: 1.25rem;
+  }
+
+  .modern-switch {
+    font-size: 1rem;
+  }
+
+  .modern-switch .form-check-input {
+    width: 3.5rem;
+    height: 1.75rem;
+  }
+
+  /* Review Section - Better Mobile Layout */
+  .review-section .review-card {
+    margin-bottom: 1rem;
+  }
+
+  .review-section .card-header {
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .review-section .card-body {
+    padding: 1rem;
+  }
+
+  .review-section p {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .review-section .row .col-md-6 {
+    width: 100%;
+  }
+
+  .summary-card .card-body {
+    padding: 1.25rem;
+  }
+
+  .summary-card h5 {
+    font-size: 1.1rem;
+  }
+
+  /* Navigation Buttons - Stack on Mobile */
+  .wizard-navigation {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 1rem;
+    margin: 0 -1rem -1rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .wizard-navigation .d-flex {
+    gap: 0.75rem;
+  }
+
+  .wizard-navigation button {
+    flex: 1;
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .modern-btn-outline,
+  .modern-btn-success {
+    padding: 0.875rem 1.5rem;
+  }
+
+  /* User Type Modal */
+  .user-type-modal .modal-dialog {
+    margin: 1rem;
+  }
+
+  .user-type-modal .modal-body {
+    padding: 2rem 1.5rem;
+  }
+
+  .user-type-modal h4 {
+    font-size: 1.25rem;
+  }
+
+  .user-type-modal .d-grid {
+    gap: 1rem !important;
+  }
+
+  .user-type-modal button {
+    padding: 1rem !important;
+    font-size: 1rem;
+  }
+
+  /* Progress Bar */
+  .modern-progress {
+    height: 6px !important;
+    margin-bottom: 1rem;
+  }
+
+  /* Alert */
+  .alert {
+    font-size: 0.9rem;
+    padding: 0.875rem;
+  }
+}
+
+/* Mobile Portrait (up to 575px) */
+@media (max-width: 575px) {
+  .invoice-container {
+    padding: 0;
+  }
+
+  .invoice-header {
+    margin-bottom: 1rem;
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .invoice-header h2 {
+    font-size: 1.35rem;
+  }
+
+  /* Search Card */
+  .search-card .card-body {
+    padding: 1rem;
+  }
+
+  /* Pagination */
+  .modern-pagination .page-link {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.8rem;
+    min-width: 36px;
+  }
+
+  .pagination-container small {
+    font-size: 0.75rem;
+  }
+
+  /* Compact Wizard Steps */
+  .wizard-steps {
+    gap: 0.25rem;
+    padding: 0.5rem;
+  }
+
+  .wizard-step {
+    min-width: 60px;
+  }
+
+  .step-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .step-title {
+    font-size: 0.6rem;
+  }
+
+  /* Ultra Compact Forms */
+  .modern-input,
+  .modern-input-sm,
+  .modern-select,
+  .form-select.modern-select {
+    padding: 0.75rem 0.875rem;
+    font-size: 16px; /* Keep 16px to prevent zoom */
+  }
+
+  /* Keep select touch-friendly */
+  .modern-select,
+  .form-select.modern-select {
+    min-height: 44px;
+    padding-right: 2.75rem;
+    background-size: 18px 14px;
+    font-size: 16px !important;
+  }
+
+  .form-label {
+    font-size: 0.8rem;
+  }
+
+  /* Mobile Card Enhancements */
+  .invoice-mobile-card {
+    border-radius: 12px;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .invoice-mobile-card .card-body {
+    padding: 1rem;
+  }
+
+  .invoice-mobile-card h6 {
+    font-size: 0.95rem;
+  }
+
+  .invoice-amount {
+    font-size: 1.35rem;
+  }
+
+  .invoice-mobile-card .btn {
+    padding: 0.65rem;
+    font-size: 0.875rem;
+  }
+
+  /* Item Cards - Even More Compact */
+  .item-card {
+    border-radius: 10px;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .item-card .card-body {
+    padding: 0.875rem;
+  }
+
+  .modern-btn-secondary {
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* Review Cards */
+  .review-card {
+    border-radius: 10px;
+  }
+
+  .review-card .card-header {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.85rem;
+  }
+
+  .review-card .card-body {
+    padding: 0.875rem;
+  }
+
+  .review-card p {
+    font-size: 0.825rem;
+  }
+
+  /* Summary Card */
+  .summary-card .card-body {
+    padding: 1rem;
+  }
+
+  .summary-card h5 {
+    font-size: 1rem;
+  }
+
+  .summary-card .d-flex {
+    font-size: 0.9rem;
+  }
+
+  /* Navigation */
+  .wizard-navigation {
+    padding: 0.875rem;
+    margin: 0 -1rem -1rem;
+  }
+
+  .wizard-navigation button {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.875rem;
+  }
+
+  /* Modal Adjustments */
+  .invoice-wizard-modal .modal-body {
+    padding: 0.875rem;
+  }
+
+  .user-type-modal .modal-body {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Extra Small Devices (up to 374px) */
+@media (max-width: 374px) {
+  .invoice-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .wizard-step {
+    min-width: 55px;
+  }
+
+  .step-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .step-title {
+    font-size: 0.55rem;
+  }
+
+  .modern-input,
+  .modern-input-sm,
+  .modern-select,
+  .form-select.modern-select {
+    padding: 0.65rem 0.75rem;
+    font-size: 16px; /* Keep 16px to prevent zoom */
+  }
+
+  /* Maintain select usability */
+  .modern-select,
+  .form-select.modern-select {
+    min-height: 42px;
+    padding-right: 2.5rem;
+    background-size: 16px 12px;
+    font-size: 16px !important;
+  }
+
+  .invoice-amount {
+    font-size: 1.2rem;
+  }
+
+  .wizard-navigation button {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .wizard-navigation .d-flex {
+    gap: 0.5rem;
+  }
+}
+
+/* Touch-Friendly Enhancements */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets */
+  .modern-btn-primary,
+  .modern-btn-secondary,
+  .modern-btn-outline,
+  .modern-btn-success,
+  .modern-btn-danger {
+    min-height: 44px;
+  }
+
+  .form-check-input {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Optimize select for touch */
+  .modern-select,
+  .form-select.modern-select {
+    min-height: 48px;
+    font-size: 16px !important; /* Prevent iOS zoom - CRITICAL! */
+    padding: 1rem;
+    padding-right: 3rem;
+    -webkit-tap-highlight-color: rgba(102, 126, 234, 0.1);
+  }
+
+  /* Better tap feedback */
+  .modern-input:active,
+  .modern-input-sm:active {
+    transform: scale(0.99);
+  }
+
+  .modern-select:active,
+  .form-select.modern-select:active {
+    background-color: #f8f9ff;
+    border-color: #667eea;
+  }
+
+  button:active {
+    transform: scale(0.97);
+  }
+
+  .item-card:active,
+  .invoice-mobile-card:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Landscape Orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .invoice-wizard-modal .modal-content {
+    height: auto;
+    max-height: 100vh;
+  }
+
+  .wizard-steps {
+    margin: 0.75rem 0;
+  }
+
+  .step-content {
+    min-height: auto;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+
+  .wizard-navigation {
+    position: relative;
+    margin: 0;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Alert Styling */
+.alert {
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  animation: slideInDown 0.3s ease;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
